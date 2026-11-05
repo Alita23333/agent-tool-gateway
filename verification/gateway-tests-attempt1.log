@@ -1,0 +1,127 @@
+SUITE gateway-unittest.cjs
+PASS: classify dd -> CRITICAL 
+PASS: classify mkfs -> CRITICAL 
+PASS: classify fastboot flash -> CRITICAL 
+PASS: classify factory reset -> CRITICAL 
+PASS: classify echo -> PRIVILEGED 
+PASS: classify Write inside ws -> WRITE 
+PASS: classify Write outside ws -> PRIVILEGED 
+PASS: classify Read -> READ 
+PASS: classify CreateWorkflow -> DENIED_DEFERRED 
+PASS: classify unknown mcp -> PRIVILEGED 
+PASS: decide CRITICAL->hard_confirm all modes 
+PASS: decide DENIED_DEFERRED->deny 
+PASS: decide PRIVILEGED full->auto 
+PASS: decide PRIVILEGED ask->ask 
+PASS: decide WRITE ask->ask auto/full->auto 
+PASS: decide READ->auto 
+PASS: hard-confirm asked via UI ["partition-dd","critical-device-node"]
+PASS: tokenless allow refused 
+PASS: core got deny after tokenless 
+PASS: reject journaled 
+PASS: tokened allow -> allow 
+PASS: hard-confirm allow journaled with rule hits 
+
+RESULT: PASS=22 FAIL=0
+SUITE wws-unittest.cjs
+OK   resolver rejects traversal
+OK   resolver rejects absolute
+OK   resolver rejects backslash
+OK   resolver rejects multi-level missing (no flag)
+OK   resolver allows multi-level missing with createParents
+OK   resolver rejects reserved store
+OK   resolver accepts existing file
+OK   contain absolute inside
+OK   contain absolute outside
+OK   user_version is 3
+OK   write_txn table exists
+OK   create ok
+OK   create envelope fields
+OK   create txn terminal completed
+OK   create operation row at terminal (full model-visible name)
+OK   create file content
+OK   second create intent committed
+OK   second create refused ws_already_exists
+OK   second create txn refused + deny row
+OK   overwrite ok + reversible + backup descriptor
+OK   overwrite before/after hashes
+OK   backup artifact + sidecar on disk
+OK   expect_hash mismatch -> ws_conflict
+OK   conflict txn refused (R2)
+OK   conflict deny operation row
+OK   append creates + create_parents
+OK   rollback overwrite ok
+OK   rollback restored content
+OK   rolled_back appended to original txn
+OK   rollback create -> delete_created
+OK   rollback refuses when edited later
+OK   rollback refusal journaled
+OK   delete ok
+OK   upstream intent ok
+OK   upstream intent+prepared in permission leg with backup (R1)
+OK   route-b completion unobserved
+OK   upstream terminal completed/event_reported
+OK   upstream op row result unobserved
+OK   recovery: unchanged intent -> abandoned
+OK   recovery: prepared matching end state -> completed (weak verify)
+OK   recovery rows marked
+OK   v2 -> v3 keeps rows + bumps version
+OK   four tools defined readOnly:false
+OK   schemas additionalProperties:false
+RESULT: PASS=44 FAIL=0
+SUITE provider-settlement-regression.cjs
+PASS unknown provider remains PRIVILEGED and asks; exact successful row completed
+PASS device_info_identity existing risk ceiling retained
+PASS text_digest_inspect existing risk ceiling retained
+PASS failed provider call without success provenance records bounded error
+PASS untrusted error detail cannot enter journal result
+PASS reject arguments without overwriting admitted result
+PASS reject session without overwriting admitted result
+PASS reject tool without overwriting admitted result
+PASS reject missing-row without overwriting admitted result
+PASS reject duplicate without overwriting admitted result
+PASS reject pin without overwriting admitted result
+PASS reject invalid-pin without overwriting admitted result
+PASS reject missing-pin without overwriting admitted result
+PASS reject conflicting-ok without overwriting admitted result
+PASS reject conflicting-tool without overwriting admitted result
+PASS reject missing-ok without overwriting admitted result
+PASS reject call-id without overwriting admitted result
+PASS SQL compare-and-set refuses row completed between check and commit
+PASS pending scope comes from registered Dispatcher metadata, not caller metadata; UI stays separate
+PASS real responder refuses success on SQLite failure, stale binding, epoch or pin
+PASS no journal cannot admit provider
+PASS real closed journal cannot finish success
+RESULT 22 PASS
+SUITE provider-declaration-settlement-test.cjs
+✔ declaration settlement: match (53.536ms)
+✔ declaration settlement: wrong-definition (47.4701ms)
+✔ declaration settlement: missing-definition (46.8399ms)
+✔ declaration settlement: invalid-definition (48.1037ms)
+✔ declaration settlement: definition-without-content (47.6138ms)
+✔ declaration settlement: cancelled (55.1338ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 372.2539
+SUITE provider-abandoned-carrier-test.cjs
+✔ abandoned native carrier: cancel (57.1836ms)
+✔ abandoned native carrier: runtime-exit (54.1428ms)
+✔ abandoned native carrier: session-change (53.5484ms)
+✔ abandoned native carrier: journal-failure (50.3228ms)
+✔ abandoned native carrier: wrong-scope (50.4792ms)
+✔ abandoned native carrier: already-finished (77.2061ms)
+✔ abandoned native carrier: ui-not-owned (50.0955ms)
+✔ abandoned native carrier: provider-timeout (51.5286ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 8
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 519.7599

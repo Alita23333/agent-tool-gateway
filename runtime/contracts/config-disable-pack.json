@@ -1,0 +1,6 @@
+{
+  "$comment": "User-layer config the bootstrap writes to <HOME>/.zcode/cli/config.json at every boot (merged over existing). R2: closes core-internal execution paths that never consult the permission broker. Verified by scripts/verify-phase4.sh §2.",
+  "features": { "memory": false },
+  "memory": { "extractionEnabled": false },
+  "plugins": { "enabled": false }
+}

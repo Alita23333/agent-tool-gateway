@@ -1,0 +1,14 @@
+{
+  "$comment": "Versioned hard-confirm rule pack v1 (REQUIREMENTS §6). Matched against Bash command (multiline-normalized) and file targets of file tools. ANY hit ⇒ risk CRITICAL ⇒ hard-confirm in EVERY user mode (non-bypassable). Token = the pending request id shown in the approval UI; a tokenless allow is refused and journaled as reject.",
+  "version": 1,
+  "rules": [
+    { "id": "partition-flash-fastboot", "regex": "\\bfastboot\\b[^\\n]*\\b(flash|erase|format|flashing\\s+(unlock|lock)|oem\\s+(unlock|lock))\\b", "flags": "i" },
+    { "id": "partition-dd", "regex": "\\bdd\\b[^\\n]*\\bof=\\s*/dev/(block|mmcblk)", "flags": "i" },
+    { "id": "mkfs", "regex": "\\bmkfs(\\.\\w+)?\\b", "flags": "i" },
+    { "id": "flash-image", "regex": "\\bflash_image\\b|\\bflash_all\\b", "flags": "i" },
+    { "id": "factory-reset", "regex": "\\bfactory[\\s_-]?reset\\b|\\bwipe[\\s_]?data\\b|\\brecovery\\b[^\\n]*--wipe\\b|--wipe_data\\b", "flags": "i" },
+    { "id": "bootloader-critical", "regex": "\\bbootloader\\b[^\\n]*\\b(unlock|lock|erase|flash)\\b", "flags": "i" },
+    { "id": "destructive-rm", "regex": "\\brm\\s+(-[a-z]*r[a-z]*f?|[a-z]*f[a-z]*r)\\b[^\\n]*\\s(/data|/system|/vendor|/product|/sdcard|/storage)\\b", "flags": "i" },
+    { "id": "critical-device-node", "regex": "/dev/(block|mmcblk[0-9]|by-name)\\b", "flags": "i" }
+  ]
+}

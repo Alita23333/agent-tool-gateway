@@ -1,0 +1,86 @@
+[
+  {
+    "originalPath": "app/src/main/assets/zcode-runtime/gateway.cjs",
+    "publishedPath": "runtime/gateway.cjs",
+    "originalSha256": "d5c1a772b40a39f8f02d344d191a932ac121af42abba5219362c1b7aad23c89b",
+    "publishedSha256": "d5c1a772b40a39f8f02d344d191a932ac121af42abba5219362c1b7aad23c89b",
+    "change": "byte-identical"
+  },
+  {
+    "originalPath": "app/src/main/assets/zcode-runtime/workspace-files.cjs",
+    "publishedPath": "runtime/workspace-files.cjs",
+    "originalSha256": "f2527eccaaf1b2397ed52d72b20600532ec8bd769d720ccbd372abf5507961ad",
+    "publishedSha256": "f2527eccaaf1b2397ed52d72b20600532ec8bd769d720ccbd372abf5507961ad",
+    "change": "byte-identical"
+  },
+  {
+    "originalPath": "app/src/main/assets/zcode-runtime/carrier-authorization.cjs",
+    "publishedPath": "runtime/carrier-authorization.cjs",
+    "originalSha256": "e3dc1878b0f49ace1953026fa0ac4ce3f4d98fb0f95ab1ac5153375c341a032f",
+    "publishedSha256": "e3dc1878b0f49ace1953026fa0ac4ce3f4d98fb0f95ab1ac5153375c341a032f",
+    "change": "byte-identical"
+  },
+  {
+    "originalPath": "app/src/main/assets/zcode-runtime/contracts/config-disable-pack.json",
+    "publishedPath": "runtime/contracts/config-disable-pack.json",
+    "originalSha256": "aba9fd6f38ba754f86bab0f7ce8610377c7663cf918f580eef480f3240c1ed0e",
+    "publishedSha256": "aba9fd6f38ba754f86bab0f7ce8610377c7663cf918f580eef480f3240c1ed0e",
+    "change": "byte-identical"
+  },
+  {
+    "originalPath": "app/src/main/assets/zcode-runtime/contracts/hard-confirm-pack.json",
+    "publishedPath": "runtime/contracts/hard-confirm-pack.json",
+    "originalSha256": "c511457a86d3329172db96821662287c28bc38592b0dfc3b6aebb5d73e0acd83",
+    "publishedSha256": "c511457a86d3329172db96821662287c28bc38592b0dfc3b6aebb5d73e0acd83",
+    "change": "byte-identical"
+  },
+  {
+    "originalPath": "app/src/main/assets/zcode-runtime/contracts/journal.sql",
+    "publishedPath": "runtime/contracts/journal.sql",
+    "originalSha256": "86867f08766fddf07fcfd91d15ec541a30d30bfb00f56daaf528a442ebec271b",
+    "publishedSha256": "86867f08766fddf07fcfd91d15ec541a30d30bfb00f56daaf528a442ebec271b",
+    "change": "byte-identical"
+  },
+  {
+    "originalPath": "app/src/main/assets/zcode-runtime/bootstrap.cjs",
+    "publishedPath": "integration-fixtures/bootstrap.cjs",
+    "originalSha256": "768588e85c79ffc1b439ecdf2d7df5b1b01827f672f052a3daf085161dde942b",
+    "publishedSha256": "768588e85c79ffc1b439ecdf2d7df5b1b01827f672f052a3daf085161dde942b",
+    "change": "byte-identical"
+  },
+  {
+    "originalPath": "tools/phase9/provider-settlement-regression.cjs",
+    "publishedPath": "tests/provider-settlement-regression.cjs",
+    "originalSha256": "b18bf87e475b0a3fc6cef683456d530a13e4186f4023ea572fd918469e37260a",
+    "publishedSha256": "b18bf87e475b0a3fc6cef683456d530a13e4186f4023ea572fd918469e37260a",
+    "change": "byte-identical"
+  },
+  {
+    "originalPath": "tools/phase9/provider-declaration-settlement-test.cjs",
+    "publishedPath": "tests/provider-declaration-settlement-test.cjs",
+    "originalSha256": "b2a87b723b3e78a27375bfd4f543a1b085f4ad8eafbf8e593f8eb3ffd18a69e2",
+    "publishedSha256": "b2a87b723b3e78a27375bfd4f543a1b085f4ad8eafbf8e593f8eb3ffd18a69e2",
+    "change": "byte-identical"
+  },
+  {
+    "originalPath": "tools/phase9/provider-abandoned-carrier-test.cjs",
+    "publishedPath": "tests/provider-abandoned-carrier-test.cjs",
+    "originalSha256": "ff9b772a25747cca5b701db1d1df39c4d7dd867513e34661e8482a992d09fa71",
+    "publishedSha256": "ff9b772a25747cca5b701db1d1df39c4d7dd867513e34661e8482a992d09fa71",
+    "change": "byte-identical"
+  },
+  {
+    "originalPath": "tools/phase8/gateway-unittest.cjs",
+    "publishedPath": "tests/gateway-unittest.cjs",
+    "originalSha256": "1f7ece55c878e3fb247fec9bd599cc40eba1f98c80b6abd3be5d0589ee227dfc",
+    "publishedSha256": "1f7ece55c878e3fb247fec9bd599cc40eba1f98c80b6abd3be5d0589ee227dfc",
+    "change": "byte-identical"
+  },
+  {
+    "originalPath": "tools/phase8/wws-unittest.cjs",
+    "publishedPath": "tests/wws-unittest.cjs",
+    "originalSha256": "6fc3dd378c871f37cf2d6ebc533e89f58ee6593f153b07f1ad6530083bfa395a",
+    "publishedSha256": "6fc3dd378c871f37cf2d6ebc533e89f58ee6593f153b07f1ad6530083bfa395a",
+    "change": "byte-identical"
+  }
+]
